@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iBody - Academia com IA</title>
+  <link rel="icon" href="https://i.imgur.com/Dm0j2jh.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #1e2a3a;
+      color: #fff;
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden; 
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100vh;
+      background-image: url('https://i.imgur.com/dgxTAwb.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 100vh;
+      z-index: -1;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1f2b3c;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      height: 250px;
+      width: auto;
+      animation: zoomIn 1s ease forwards;
+      margin-right: auto;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      z-index: 10;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #16a085;
+    }
+
+    .hero {
+      background: url('https://www.xprimeacademia.com.br/images/hero.jpg') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+      filter: brightness(70%);
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1.5s forwards;
+    }
+
+    .btn {
+      background-color: #16a085;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1abc9c;
+    }
+
+    .content {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #ecf0f1;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #bdc3c7;
+    }
+
+    .services {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: #34495e;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      width: 30%;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .footer {
+      background-color: #1f2b3c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: scrollIn 1s forwards;
+    }
+
+    @keyframes scrollIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-card {
+        width: 80%;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <img src="https://i.imgur.com/Dm0j2jh.png" alt="Logo iBody" class="logo">
+      <ul class="menu">
+        <li><a href="#sobre" class="scroll-link">Sobre</a></li>
+        <li><a href="#objetivo" class="scroll-link">Objetivo</a></li>
+        <li><a href="#servicos" class="scroll-link">Serviços</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Transforme seu Corpo com a iBody</h1>
+      <p>Treinamento Personalizado com Inteligência Artificial para Resultados Rápidos</p>
+      <a href="#sobre" class="btn">Saiba mais</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="content scroll-animate">
+    <h2>Sobre a iBody</h2>
+    <p>Você já foi em uma academia e ficou perdido ou confuso, sem saber o que fazer, sem saber o que está treinando e pensou em desistir?</p>
+    <p>Estima-se que 30% a 40% das pessoas desistem de treinar pois não possuem uma orientação adequada dos personais presentes nas academias, ou seja, pessoas deixam de cuidar da sua própria saúde por falta de profissionais capacitados em ajudar os alunos.</p>
+    <p><i>Com o crescimento das IAs, esse contexto pode mudar, pois a IA está revolucionando o mundo, ajudando cada vez mais no nosso cotidiano em até nos menores detalhes.</i></p>
+    <p><i>O nosso objetivo é utilizar dessa ferramenta para que treinos personalizados sejam criados para cada tipo de objetivo, tipo de corpo e tipo de músculo que o aluno queira trabalhar, com videoaulas sobre cada exercício, tornando o treino eficaz e seguro.</i></p>
+    <p><i>Além de criar os treinos, a IA também fornecerá explicações detalhadas, com vídeos, fotos e mostrando em qual área do músculo o aluno está trabalhando.</i></p>
+    <p><i>Com base em dados coletados, a IA criará um treino específico para emagrecimento, ganho de massa muscular, resistência, etc. Além de adaptar os treinos conforme a evolução do aluno.</i></p>
+  </section>
+
+  <section id="objetivo" class="content scroll-animate">
+    <h2>Nosso Objetivo</h2>
+    <p>Nosso objetivo é proporcionar uma experiência única com treinos que se ajustam automaticamente ao seu progresso, aproveitando o poder da IA para otimizar seus resultados.</p>
+  </section>
+
+  <section id="servicos" class="content scroll-animate">
+    <h2>Serviços</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Treinamento Personalizado</h3>
+        <p>Treinos personalizados baseados no seu histórico e objetivos de fitness.</p>
+      </div>
+      <div class="service-card">
+        <h3>Acompanhamento Contínuo</h3>
+        <p>Relatórios e ajustes de treino baseados no seu progresso diário.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 iBody. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth',
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
